@@ -1,0 +1,171 @@
+html {
+  box-sizing: border-box; /*по умолчанию content-box*/
+}
+*, *:after, *:before {
+  box-sizing: inherit; /*наследуемый, желательно писать так*/
+}
+/* 
+* {
+  box-sizing: border-box; - либо можно писать так. это - размер коробки. border-box-указание размера блока без паддинга и бордера.
+} 
+*/
+
+.container {
+  width: 580px;
+  margin: 0 auto;
+}
+
+.page {
+  display: flex; /*флекс*/
+  flex-direction: column; /*направление*/
+  min-width: 640px; /*мин ширина, если указывается мин ширина, то желательно указывать и макс ширину*/
+  min-height: 100vh; /*мин высота */
+  margin: 0;
+  font-family: "Verdana", "Tahoma", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #f2f2f2;
+  background-color: #17161a;
+}
+
+.section-title {
+  width: 100%; /*?*/
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+.titles {
+  margin-bottom: 0;
+}
+
+a {
+  color: #6653d9;
+}
+
+a:focus {
+  outline-color: #3cc421; /*фокус ввиде рамки. фокус через табиндекс. еще background-color: #fff; */
+}
+
+.page-header {
+  margin-bottom: 20px;
+  color: #333333;
+  background-color: #968d59;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /*тень-справа, слева, размытие, радиус. указывать ввиде rgba с прозрачностью 0.1-0.3*/
+}
+
+.page-header .container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url("img/raccoons.svg"); /*вставка*/
+  background-repeat: no-repeat; /*повторение заднего плана, есть другие значения*/
+  background-position: bottom right; /*позиционирование*/
+  background-size: 290px 212px; /*размер, еще значения: auto, contain, cover */
+}
+
+.page-header a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page-title {
+  margin: 0;
+  margin-bottom: 4px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap; /*обертка, запрет принудительного сжатия в одну строку, перенос блоков (зависит от ширины) +reverse, по умол nowrap*/
+  justify-content: space-between; /*флекс. выравнивание. значения: + flex-start, flex-end, space-around, center*/
+  margin-bottom: 32px;
+ }
+
+.about-image {
+   width: 147px;
+   height: 147px;
+   border-radius: 50%;
+ }
+
+.about-content {
+   width: 410px;
+   font-size: 14px;
+   line-height: 24px;
+ }
+
+.about-content p {
+   margin: 0;
+   margin-bottom: 12px;
+   padding: 0;
+ }
+
+.status {
+  margin-bottom: 32px;
+}
+
+.status p {
+  margin: 0;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  border-radius: 32px 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+.contacts {
+  margin-bottom: 50px;
+}
+
+.contacts img {
+  width: 146px;
+  height: 146px;
+  margin-right: 24px;
+ } 
+
+.contacts p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+p.contacts-name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-style: italic;
+  line-height: 20px;
+}
+
+.contacts a {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.page-footer {
+  margin-top: auto; /*?*/
+  color: #ffffff;
+  background-color: #6653d9;
+}
+
+.page-footer .container {
+  display: flex;
+  align-items: center; /*флекс. выравнивание. +значения: baseline-p не убирать, flex-start, flex-end, scretch-высота должна auto*/
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 14px;
+}
+
+.page-footer p {
+  margin: 0;
+  padding: 0;
+}
